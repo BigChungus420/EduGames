@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    
+
+    <script src="functions.js"></script>
+    <script src="Game_1.js"></script>
+    <script src="p5.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
@@ -23,13 +29,39 @@
 
 <body>
     <div class="container">
-        <h1> Head 1 </h1>
+        <div class="row">
+            <h1 style="color:darkred">Head 1</h1>
+            <h2 style="color: darksalmon"> Head 2 </h2>
+
+        </div>
 
         <div class="row">
-            <h2> Head 2 </h2>
-            
+            <div class="col-md-auto ">
+                <div class="col-md-auto">
+                <div class="card" style="background-color:blue; color: darkred; width: 500px; height: 500px;">
+                    <div class="card-header" style="background-color: #333;">Test</div>
+                    
+                    <div class="card-body" style="height: 500px;" id="Game_1-div">
+                        <div id="canvas-holder"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 
 </body>
 
