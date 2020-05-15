@@ -1,0 +1,19 @@
+.body {
+    background-color: rgb(27, 34, 44);
+}
+
+#card-head {
+    font-size: 40px;
+    background-color: rgb(83, 21, 22); 
+    color: rgb(18, 21, 28);
+}
+
+#card-body {
+    height: 415px;
+    width: 500px;
+}
+
+#card-stuff {
+    margin: 1rem;
+    background-color: rgb(18, 21, 28);
+}
