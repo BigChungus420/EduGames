@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 function setup() {
     canvas = createCanvas(500, 500);
     canvas.parent("canvas-holder");
@@ -41,7 +43,7 @@ class Player {
     }
 
     character() {
-        var c = color(0, 0, 0);
+        let c = color(0, 0, 0);
         fill(c);
         circle(this.xPos, this.yPos, this.diameter);   
         
