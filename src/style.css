@@ -6,14 +6,26 @@
     font-size: 40px;
     background-color: rgb(83, 21, 22); 
     color: rgb(18, 21, 28);
+    text-align: center;
 }
 
 #card-body {
-    height: 415px;
     width: 500px;
+    height: 415px;
 }
 
 #card-stuff {
     margin: 1rem;
     background-color: rgb(18, 21, 28);
 }
+
+#card-game {
+    width: 900px;
+    height: 510px;
+}
+
+#card-game-settings {
+    width: 432px;
+    height: 200px;
+}
+

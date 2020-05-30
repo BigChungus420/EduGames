@@ -1,7 +1,10 @@
 /*jshint esversion: 6 */
 
+var canvasX = 900;
+var canvasY = 510;
+
 function setup() {
-    canvas = createCanvas(500, 500);
+    canvas = createCanvas(canvasX, canvasY);
     canvas.parent("canvas-holder");
     noStroke();
 
@@ -10,9 +13,10 @@ function setup() {
 }
 
 function draw() {
-    background(235);
+    background(83, 21, 22);
     player.character();
     player.move();
+    player.checkXY();
 }
 
 class Player {
@@ -22,7 +26,8 @@ class Player {
         this.xPos = xPos;
         this.yPos = yPos;
         this.diameter = diameter;
-        this.color = (0, 0, 0);
+        this.radius = this.diameter * 0,5;
+        this.color = (0);
     }
 
     move() {
@@ -48,5 +53,16 @@ class Player {
         circle(this.xPos, this.yPos, this.diameter);   
         
     }
-
+  
+  checkXY(){
+    if (this.xPos - this.radius <= 0)
+      this.xPos += this.xSpeed
+    if (this.xPos + this.radius >= canvasX)
+      this.xPos -= this.xSpeed
+    if (this.yPos - this.radius <= 0)
+      this.yPos += this.ySpeed
+    if (this.yPos + this.radius >= canvasY)
+      this.yPos -= this.ySpeed
+    
+  }
 }
