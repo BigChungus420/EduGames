@@ -84,18 +84,18 @@ function playAgain(){
 }
 
 // Funktion der tjekker om man er død
-function checkDie (player){
-    if (player.playerLife == 0){
-        noLoop();
-        clear();
-        background(83, 21, 22);
-        fill((255, 255, 255));
-        textSize(30);
-        textAlign(CENTER, CENTER);
-        text("Du tabte. Vil du prøve igen?", width/2.05, height/2.5);
+// function checkDie (player){
+//     if (player.playerLife == 0){
+//         noLoop();
+//         clear();
+//         background(83, 21, 22);
+//         fill((255, 255, 255));
+//         textSize(30);
+//         textAlign(CENTER, CENTER);
+//         text("Du tabte. Vil du prøve igen?", width/2.05, height/2.5);
 
-        tryAgain = createButton('Prøv igen');
-        tryAgain.position(input.x + input.width, height / 1.5);
-        tryAgain.mousePressed(playAgain);
-    }
-}
+//         tryAgain = createButton('Prøv igen');
+//         tryAgain.position(input.x + input.width, height / 1.5);
+//         tryAgain.mousePressed(playAgain);
+//     }
+// }
