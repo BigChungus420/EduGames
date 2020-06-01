@@ -1,4 +1,4 @@
-/*jshint esversion: 7 */
+/*jshint esversion: 6 */
 
 // Funktion der kører spillet når der trykkes på start
 function run() {
