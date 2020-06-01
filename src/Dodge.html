@@ -20,11 +20,13 @@
 </head>
 
 <!-- Overskrift og home button -->
+
 <body class="body">
     <div class="container-fluid">
         <div class="row">
             <div class="col order-first">
-                <a href="https://bigchungus420.github.io/EduGames/src/index.html" class="image" title="Home Page" style="position:absolute; left:25px; top:25px;">
+                <a href="https://bigchungus420.github.io/EduGames/src/index.html" class="image" title="Home Page"
+                    style="position:absolute; left:25px; top:25px;">
                     <img src="images\home-button.png" style="width:100px;height:100px">
                 </a>
             </div>
@@ -54,20 +56,44 @@
             <div class="col-md-auto">
                 <div class="card" id="card-stuff">
                     <div class="card-body" id="card-game-settings">
-                        <form>
-                            <div class="form-group text-left">
-                                <input type="range" class="slider" min="10" max="30" value="20" id="testSlider" style="background-color: rgb(83, 21, 22);">
+                        <div class="row justify-content-between m-4 mt-0">
 
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-success" id="startGame" value="Submit"> Start </button>
                             </div>
-                        </form>
-
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-danger" id="pauseGame" value="Submit"> Pause </button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-primary" id="resumeGame" value="Submit"> Genoptag </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form>
+                                <div class="form-group text-left">                                    
+                                    <input type="range" class="slider" min="0" max="10" value="5" id="difficultySlider"
+                                        style="background-color: rgb(83, 21, 22); position: absolute; left: 20px">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-auto">
                 <div class="card" id="card-stuff">
                     <div class="card-body" id="card-game-settings">
-
+                        <div class="row justify-content-center">
+                            <h2 style="color: aliceblue; "><b> Styring</b></h2>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ul style="color: aliceblue; font-size: 20px;">
+                                    <li>(W A S D) Styrer op, venstre, ned og højre</li>
+                                    <li>Spillet går ud på at undgå projektiler</li>
+                                    <li>Hvis man bliver ramt, skal man svare rigtigt på et spørgsmål for ikke at miste liv</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,6 +112,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
 
 </body>
 
