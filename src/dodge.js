@@ -177,6 +177,7 @@ class Enemy {
 
 start = false;
 points = 0;
+counter = 0;
 
 function setup() {
   // Skaber kanvas og får det ind på hjemmesiden
@@ -221,7 +222,7 @@ function draw() {
     player.move();
     player.checkXY();
 
-    pointSystem(points);
+    GUI(points, player.playerLife);
 
 
     for (let i = 0; i < enemies.length; i++) {
@@ -230,6 +231,12 @@ function draw() {
 
       if (enemies[i].wallCollision()) {
         points += 50;
+        counter += 1;
+        if (counter == 5) {
+          enemies[enemies.length] = new Enemy(enemySize, random(1, 5), floor(random(1, 4)));
+          counter = 0;
+          console.log(enemies.length);
+        }
         enemies[i] = new Enemy(enemySize, random(1, 5), floor(random(1, 4)));
       }
 

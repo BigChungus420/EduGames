@@ -73,16 +73,17 @@ if (questionType == 3){
 }
 }
 
-function pointSystem(points) {
+function GUI(points, lives) {
     fill((255, 255, 255));
     textSize(30);
-    textAlign(CENTER, CENTER);
-    text("points: " + str(points), width/2, height/2);
+    textAlign(LEFT, CENTER);
+    text("points: " + str(points), 50, 50);
+    text("Lives: " + str(lives), 50, 100);
 }
 
 
 function playAgain(){
-    location.reload();   
+    location.reload();
 }
 
 function goToFrontpage(){
