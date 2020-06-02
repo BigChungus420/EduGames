@@ -46,10 +46,10 @@ function questionScreen (){
     
     input = createInput();
     input.id = "guess";
-    input.position(width/2, height/2);
+    input.position(windowWidth/2.45, windowHeight/3.5);
 
     button = createButton('Svar');
-    button.position(input.x + input.width, height / 2);
+    button.position(input.x + input.width, input.y);
     button.mousePressed(answer);
 }
 // Funktion der genererer tilfældige matematik spørgsmål
@@ -73,14 +73,20 @@ if (questionType == 3){
 }
 }
 
+function pointSystem(points) {
+    fill((255, 255, 255));
+    textSize(30);
+    textAlign(CENTER, CENTER);
+    text("points: " + str(points), width/2, height/2);
+}
 
 
-//______________________________FIX_________________________
 function playAgain(){
-    loop();
-    tryAgain.hide();
-    run();
-    player.playerlife -= 1;
+    location.reload();   
+}
+
+function goToFrontpage(){
+    window.location.replace("https://bigchungus420.github.io/EduGames/src/index.html");
 }
 
 // Funktion der tjekker om man er død
@@ -94,8 +100,12 @@ function checkDie (player){
         textAlign(CENTER, CENTER);
         text("Du tabte. Vil du prøve igen?", width/2.05, height/2.5);
 
-        tryAgain = createButton('Prøv igen');
-        tryAgain.position(input.x + input.width, height / 1.5);
+        tryAgain = createButton('Ja');
+        tryAgain.position(windowWidth * 0.75, height / 1.5);
         tryAgain.mousePressed(playAgain);
+
+        goBack = createButton('Nej');
+        goBack.position(windowWidth * 0.25, height / 1.5);
+        goBack.mousePressed(goToFrontpage);
     }
 }
