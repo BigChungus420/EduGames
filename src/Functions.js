@@ -77,7 +77,7 @@ function GUI(points, lives) {
     fill((255, 255, 255));
     textSize(30);
     textAlign(LEFT, CENTER);
-    text("points: " + str(points), 50, 50);
+    text("Points: " + str(points), 50, 50);
     text("Lives: " + str(lives), 50, 100);
 }
 
