@@ -2,8 +2,8 @@
 
 // Funktion der kører spillet når der trykkes på start
 function run() {
-    point = 0;
-    player.playerLife = 3;
+    points = 0;
+    player.playerLife = 3;  
     start = true;
 }
 
