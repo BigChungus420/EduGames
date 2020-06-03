@@ -2,6 +2,8 @@
 
 // Funktion der kører spillet når der trykkes på start
 function run() {
+    point = 0;
+    player.playerLife = 3;
     start = true;
 }
 
@@ -73,6 +75,7 @@ if (questionType == 3){
 }
 }
 
+// Funktion der laver GUI med liv og point
 function GUI(points, lives) {
     fill((255, 255, 255));
     textSize(30);
@@ -81,16 +84,16 @@ function GUI(points, lives) {
     text("Lives: " + str(lives), 50, 100);
 }
 
-
+// Funktion der genindlæser siden, så spillet kan spilles igen
 function playAgain(){
     location.reload();
 }
-
+// Funktion der senden tilbage til forsiden
 function goToFrontpage(){
     window.location.replace("https://bigchungus420.github.io/EduGames/src/index.html");
 }
 
-// Funktion der tjekker om man er død
+// Funktion der tjekker om man er død og spørger om man vil prøve igen, hvis man er død
 function checkDie (player){
     if (player.playerLife == 0){
         noLoop();
